@@ -9,8 +9,8 @@ import { User } from '../../models/user';
 export class BasicUserFormComponent implements OnInit {
 
   userForm:FormGroup;
-  user:User;
-
+  user:User;  
+  
   constructor( private builder:FormBuilder ) { }
   
   ngOnInit(): void {
