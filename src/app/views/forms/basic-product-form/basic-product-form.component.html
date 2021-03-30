@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Product Form</h1>
+    </div>
+  </div>
+  <form [formGroup]="productForm" (ngSubmit)="submitProductForm()">
+    <div class="form-group">
+      <label for="name" class="contol-label">Product Name</label>
+      <div class="col-12">
+        <input formControlName="name" type="text" name="name" id="name" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="desciprition" class="contol-label">Product Description</label>
+      <div class="col-12">
+        <input formControlName="description"  type="text" name="desciprition" id="desciprition" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price" class="contol-label">Product Price</label>
+      <div class="col-12">
+        <input formControlName="price"  type="text" name="price" id="price" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-12">
+        <input type="submit" value="Save Info" class="btn btn-success">
+      </div>
+    </div>
+  </form>
+</div>
