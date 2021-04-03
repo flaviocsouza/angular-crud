@@ -1,38 +1,38 @@
 <div class="container main-container">
-    <h1> Simple User Form </h1>
+    <h2> Simple User Form </h2>
     <form [formGroup]="userForm" (ngSubmit)="submitUserForm()">
-      <div class="form-group vertical-form">
-        <label class="control-label" for="firstName">First Name:</label>
-        <div class="col-12">
-          <input class="form-control" id="firstName" type="text"  formControlName="firstName"/>
+      <div class="field">
+        <label class="label" for="firstName">First Name:</label>
+        <div class="control">
+          <input class="input" id="firstName" type="text"  formControlName="firstName"/>
         </div>
       </div>
-      <div class="form-group">
-        <label class="control-label" for="lastName">Last Name:</label>
-        <div class="col-12">
-          <input class="form-control" id="lastName" type="text"  formControlName="lastName"/>
+      <div class="field">
+        <label class="label" for="lastName">Last Name:</label>
+        <div class="control">
+          <input class="input" id="lastName" type="text"  formControlName="lastName"/>
         </div>
     </div>
-    <div class="form-group">
-      <label class="control-label" for="ssn">SSN:</label>
-      <div class="col-12">
-        <input class="form-control" id="ssn" type="text"  formControlName="ssn"/>
+    <div class="field">
+      <label class="label" for="ssn">SSN:</label>
+      <div class="control">
+        <input class="input" id="ssn" type="text"  formControlName="ssn"/>
       </div>
     </div>
-      <div class="form-group">
-        <label class="control-label" for="eMail">e-Mail:</label>
-        <div class="col-12">
-          <input class="form-control" id="eMail" type="email"  formControlName="eMail"/>
+      <div class="field">
+        <label class="label" for="eMail">e-Mail:</label>
+        <div class="control">
+          <input class="input" id="eMail" type="email"  formControlName="eMail"/>
         </div>
       </div>
-      <div class="form-group">
-        <label class="control-label" for="password">Password:</label>
-        <div class="col-12">
-          <input class="form-control" id="password" type="password"  formControlName="password"/>
+      <div class="field">
+        <label class="label" for="password">Password:</label>
+        <div class="control">
+          <input class="input" id="password" type="password"  formControlName="password"/>
         </div>
       </div>
       <div>
-        <button type="submit" class="btn btn-success" id="send">Save Info</button>
+        <button type="submit" class="button" id="send">Save Info</button>
       </div>
     </form>
   </div>

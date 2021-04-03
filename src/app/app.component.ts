@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <app-menu></app-menu>
-    <div class="content">
-      <div class="container">
-        <div class="row">
-          <router-outlet></router-outlet>
-        </div>
-      </div>
+    <div class="container">
+      <router-outlet></router-outlet>        
     </div>
   `
 })
