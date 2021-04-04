@@ -1,9 +1,11 @@
 import { Routes } from "@angular/router";
-import { BasicUserFormComponent } from "./views/forms/basic-user-form/basic-user-form.component";
 import { HomeComponent } from "./views/pages/home/home.component";
+import { UserFormComponent } from "./views/forms/user-form/user-form.component";
+import { EventFormComponent } from "./views/forms/event-form/event-form.component";
 
 
 export const rootRouterConfig:Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full'},
-    { path: 'userForm', component: BasicUserFormComponent }
+    { path: 'userForm', component: UserFormComponent },
+    { path: 'eventForm', component: EventFormComponent }
 ]

@@ -4,19 +4,24 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BasicUserFormComponent } from './views/forms/basic-user-form/basic-user-form.component';
-import { MenuComponent } from './components/navigation/menu/menu.component';
 
 import { rootRouterConfig } from './app.routes';
 import { APP_BASE_HREF } from '@angular/common';
+
+
+import { MenuComponent } from './components/navigation/menu/menu.component';
 import { HomeComponent } from './views/pages/home/home.component';
+
+import { UserFormComponent } from './views/forms/user-form/user-form.component';
+import { EventFormComponent } from './views/forms//event-form/event-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    BasicUserFormComponent,
+    UserFormComponent,
     HomeComponent,
+    EventFormComponent,
   ],
   imports: [
     BrowserModule,

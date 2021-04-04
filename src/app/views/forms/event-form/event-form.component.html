@@ -1,0 +1,43 @@
+<div>
+  <h2>Event Form</h2>
+  <form [formGroup]="eventForm" (ngSubmit)="submitEventForm()">
+    <div class="field">
+      <label class="label" for="firstName">Name:</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="name" [ngClass]="{'is-danger': displayMessages.name}"/>
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.name" [innerHTML]="displayMessages.name"></p>
+    </div>
+    <div class="field">
+      <label class="label" for="firstName">Begin Date:</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="startDate" [ngClass]="{'is-danger': displayMessages.startDate}"/>
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.startDate" [innerHTML]="displayMessages.startDate"></p>
+    </div>
+    <div class="field">
+      <label class="label" for="firstName">End Date:</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="endDate" [ngClass]="{'is-danger': displayMessages.endDate}"/>
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.endDate" [innerHTML]="displayMessages.endDate"></p>
+    </div>
+    <div class="field">
+      <label class="label" for="firstName">Administrator:</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="admin" [ngClass]="{'is-danger': displayMessages.admin}"/>
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.admin" [innerHTML]="displayMessages.admin"></p>
+    </div>
+    <div class="field">
+      <label class="label" for="firstName">Description:</label>
+      <div class="control">
+        <input class="input" type="text" formControlName="description" [ngClass]="{'is-danger': displayMessages.description}"/>
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.description" [innerHTML]="displayMessages.description"></p>
+    </div>
+    <div>
+      <button type="submit" class="button" id="send">Save Info</button>
+    </div>
+  </form>
+</div>
