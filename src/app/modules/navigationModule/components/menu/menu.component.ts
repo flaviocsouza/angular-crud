@@ -5,5 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: 'menu.component.html',
 })
 export class MenuComponent{
+  navigation:any[] = [
+    { name: 'Admin', link: 'admin'},
+    { name: 'Survey', link: 'survey'}
+  ]
+
 
 }

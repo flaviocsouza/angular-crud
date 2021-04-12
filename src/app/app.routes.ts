@@ -1,11 +1,30 @@
-import { Routes } from "@angular/router";
-import { HomeComponent } from "./views/pages/home/home.component";
-import { UserFormComponent } from "./views/forms/user-form/user-form.component";
-import { EventFormComponent } from "./views/forms/event-form/event-form.component";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./modules/navigationModule/views/home/home.component";
+import { NotFoundComponent } from "./modules/navigationModule/views/not-found/not-found.component";
 
-
-export const rootRouterConfig:Routes = [
+const rootRouterConfig:Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full'},
-    { path: 'userForm', component: UserFormComponent },
-    { path: 'eventForm', component: EventFormComponent }
+    {
+      path: 'admin', 
+      loadChildren: () => import('./modules/adminModule/admin.module')
+      .then(module => module.AdminModule)
+    },
+    {
+      path: 'survey', 
+      loadChildren: () => import('./modules/surveyModule/survey.module')
+      .then(module => module.SurveyModule)
+    },
+    
+    {path: '**', component: NotFoundComponent}
 ]
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot( rootRouterConfig )
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule { }

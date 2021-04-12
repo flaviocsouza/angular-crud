@@ -1,0 +1,16 @@
+<div class="container main-container">
+  <h2> Simple User Form </h2>
+  <form [formGroup]="surveyForm" (ngSubmit)="submitSurveyForm()">
+    <div class="field">
+      <label class="label" for="name">Survey Name:</label>
+      <div class="control">
+        <input class="input" id="name" type="text" formControlName="name"
+          [ngClass]="{'is-danger': displayMessages.name}" />
+      </div>
+      <p class="help is-danger" *ngIf="displayMessages.name" [innerHTML]="displayMessages.name"></p>
+    </div>
+    <div>
+      <button type="submit" class="button" id="send">Save Info</button>
+    </div>
+  </form>
+</div>

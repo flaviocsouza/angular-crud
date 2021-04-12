@@ -1,0 +1,10 @@
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="">Ur Opini.on</a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <a *ngFor="let navItem of navigation" class="navbar-item" routerLinkActive="is-active" [routerLink]="navItem.link">{{ navItem.name }}</a>
+    </div>    
+  </div>
+</nav>

@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
-import { ValidationMessages, GenericValidator, DisplayMessages } from '../../../Utils/genericValidator'
-import { UserModel } from '../../../models/userModel';
+import { ValidationMessages, GenericValidator, DisplayMessages } from '../../../../Utils/genericValidator'
 import { fromEvent, merge, Observable } from 'rxjs';
+import { UserModel } from '../../../../models/userModel';
 
 @Component({
   selector: 'app-user-form',
